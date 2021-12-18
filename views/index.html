@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A lightweight page with a small backend"
+    />
+
+    <title>Welcome to Boiler Buys, Shopping for Students!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        BB Tutor Portal
+      </h1>
+    </header>
+
+    <main>
+      <p class="bold">Welcome!</p>
+      <!--<a href="https://combined-multiplex.glitch.me/" title="">Return to Main Page</a>-->
+      <button onclick="window.location.href = 'https://boiler-buys-main.glitch.me/'">Return to Main Page</button>
+
+      <p>Tutors sign up to be posted on Boiler Buys Tutor Portal to get students immediately!</p>
+
+      <form>
+        <input
+          name="title"
+          type="text"
+          maxlength="100"
+          placeholder="Name"
+        />
+        <input
+          name="description"
+          type="text"
+          maxlength="100"
+          placeholder="Subject(s) / Expertise"
+        />
+        <input
+          name="contact"
+          type="text"
+          maxlength="100"
+          placeholder="Additional Comments"
+        />
+        <label>
+          Experience / Education :
+        </label>
+        <select name="category">
+          <option value="High School">
+            High School
+          </option>
+          <option value="Undergraduate Student">
+            Undergraduate Student
+          </option>
+          <option value="Graduate Student">
+            Graduate Student
+          </option>
+          <option value="Teaching Assistant">
+            Teaching Assistant
+          </option>
+          <option value="Professor">
+            Professor
+          </option>
+          <option value="In Workforce">
+            In Workforce
+          </option>
+        </select>
+        <button type="submit" id="tutor-user">Submit Rating</button>
+      </form>
+
+      <table style="width:50%">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Experience</th>
+            <th>Comments</th>
+            <th>Added</th>
+          </tr>
+        </thead>
+        <tbody id="tutor_table"></tbody>
+      </table>
+      
+    </main>
+  </body>
+</html>
